@@ -1,11 +1,11 @@
 import React, {useEffect, useState, useRef} from 'react';
 import {db, SignOut} from "../Firebase";
-import {collection, getDocs, query, onSnapshot, orderBy, limit} from 'firebase/firestore'
+import {collection, query, onSnapshot, orderBy, limit} from 'firebase/firestore'
 import Chat from "./Chat";
 import SendMessage from "./SendMessage";
 
 
-function ChatRoom(props) {
+function ChatRoom() {
     const [messages, setMessages] = useState([])
     const scroll = useRef()
 
